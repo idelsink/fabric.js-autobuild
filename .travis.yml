@@ -19,6 +19,7 @@ before_deploy:
   - node ../replace-package-name.js ./package.json fabric-gestures
 
 deploy:
+  skip_cleanup: true
   provider: npm
   email: ingmardelsink@hotmail.com
   api_key:
