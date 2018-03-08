@@ -6,7 +6,7 @@ notifications:
     on_failure: always
 
 before_install:
-  - git clone git@github.com:kangax/fabric.js.git
+  - git clone https://github.com/kangax/fabric.js.git
   - cd fabric.js
 
 install:
