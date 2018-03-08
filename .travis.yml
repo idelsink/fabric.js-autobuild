@@ -18,7 +18,7 @@ script:
   - npm run build_with_gestures
 
 before_deploy:
-  - node replace-name.js ./package.json fabric-gestures
+  - node ../replace-package-name.js ./package.json fabric-gestures
 
 deploy:
   provider: npm
