@@ -6,8 +6,6 @@ notifications:
     on_failure: always
 
 before_install:
-
-before_install:
   - git clone https://github.com/kangax/fabric.js.git
   - cd fabric.js
 
@@ -23,6 +21,8 @@ before_deploy:
 deploy:
   provider: npm
   email: ingmardelsink@hotmail.com
-  api_key: $NPM_TOKEN
+  api_key:
+    secure: uM506L4mnM0A7hzkT9NjeJuYX6DnuZzCbeOxG84U2B4mV0MUwjXNjdVVCfrvcidwf3Wc3XQP6HFMFiE1FU3yPxBLr2iXdnYdZovM0ADjfYLswNVm0O2a8/eJbfeCrK8EG5qQlWlTxfBsxMhOvWCo7vn6uQB8iJnmAl0lbNjSQ2JLNWW3BmwJ6GRiPmZ9C9vc7EZneUs57cy62QI5PZSu2na7mY8fvqlf1kcnIJEw9S/e5t0htidygRyArdo5Sqbhex8gOTs3buBYOI76pNZ3oMkomumK6ZOmSl8c4xsN/KGqnDJw56RiVbftiowOI2+GmQ0ffZ+Xde3HwxWyPZc1/vWo/tK+/HQDabHFD8sm69YF9e1rbIl1JqA8qmwiPpI+46m2iC8CLIWk7xPgp2ixpMrdNxBZpO3dCzo0OxkiflATi4/K+H+/SZkheSW7y6TV5m+o1uPAfPqxGj9G/ohrpO7ouEYBsmpBqPZykDgkCZH9rrVA4f7XIvUbhZQoIe5hLIZfP441ou9un2DBUam58aBEEtOCIqtvkDwWtdLnhoawTiLhgO66cKFBI2Wd6QlJ9rkBgxxIDLuZZSy5XUl95LDJOJRE7OqVTXZ/fk1F7AA+bZVtSMSJWTyV8MGQGMdQJJSBBmPinxwzU7hPpDo7A8l4pxjbMhVkInm4Tke+HTY=
   on:
+    repo: idelsink/fabric.js-autobuild
     branch: master
