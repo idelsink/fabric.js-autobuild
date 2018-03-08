@@ -1,9 +1,11 @@
-language: node_j
+language: node_js
 
 notifications:
   email:
     on_success: never
     on_failure: always
+
+before_install:
 
 before_install:
   - git clone https://github.com/kangax/fabric.js.git
@@ -14,3 +16,13 @@ install:
 
 script:
   - npm run build_with_gestures
+
+before_deploy:
+  - node replace-name.js ./package.json fabric-gestures
+
+deploy:
+  provider: npm
+  email: ingmardelsink@hotmail.com
+  api_key: $NPM_TOKEN
+  on:
+    branch: master
