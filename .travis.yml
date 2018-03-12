@@ -7,8 +7,8 @@ notifications:
 
 before_install:
   - git clone --recursive https://github.com/kangax/fabric.js.git
-  - git checkout $(git describe --tags --abbrev=0) # Make sure to always checkout the latest tag
   - cd fabric.js
+  - git checkout $(git describe --tags --abbrev=0) # Make sure to always checkout the latest tag
 
 install:
   - npm install
