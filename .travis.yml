@@ -6,9 +6,10 @@ notifications:
     on_failure: always
 
 before_install:
-  - git clone --recursive https://github.com/kangax/fabric.js.git
+  - git clone https://github.com/kangax/fabric.js.git
   - cd fabric.js
   - git checkout $(git describe --tags --abbrev=0) # Make sure to always checkout the latest tag
+  - git submodule update --init --recursive
 
 install:
   - npm install
