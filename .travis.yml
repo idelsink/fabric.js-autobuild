@@ -15,7 +15,7 @@ install:
   - npm install
 
 before_script:
-  - npm install -g npm@next # upgrade to the most recent release
+  - npm install -g npm@'>=3' # Update to fox the npm auth error
 
 script:
   - npm run build_with_gestures
