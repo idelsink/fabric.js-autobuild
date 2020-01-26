@@ -24,10 +24,10 @@ before_deploy:
   - node ../replace-package-name.js ./package.json fabric-with-gestures
 
 deploy:
-  skip_cleanup: true
   provider: npm
   email: $NPM_EMAIL
-  api_key: $NPM_API_KEY
+  api_token: $NPM_API_KEY
+  cleanup: true
   on:
     repo: idelsink/fabric.js-autobuild
     branch: master
