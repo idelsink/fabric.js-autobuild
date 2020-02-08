@@ -24,6 +24,7 @@ before_deploy:
   - node ../replace-package-name.js ./package.json fabric-with-gestures
 
 deploy:
+  edge: true # opt in to dpl v2
   provider: npm
   email: $NPM_EMAIL
   api_token: $NPM_API_KEY
