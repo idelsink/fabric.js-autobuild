@@ -30,5 +30,4 @@ deploy:
   api_token: $NPM_API_KEY
   cleanup: false
   on:
-    repo: idelsink/fabric.js-autobuild
     branch: master
