@@ -28,7 +28,7 @@ deploy:
   provider: npm
   email: $NPM_EMAIL
   api_token: $NPM_API_KEY
-  cleanup: true
+  cleanup: false
   on:
     repo: idelsink/fabric.js-autobuild
     branch: master
