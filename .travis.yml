@@ -31,3 +31,6 @@ deploy:
   cleanup: false
   on:
     branch: master
+    # Check that the version is not already pushed by using the `npm view` command
+    # This will be empty when that version does not exist
+    condition: -z "$(npm view fabric-with-gestures@$(git describe --tags --abbrev=0) version)"
